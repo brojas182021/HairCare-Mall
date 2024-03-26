@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "css",
+			"path": "../../../Users/brand/Downloads/haircare-mall/haircare-mall/css"
+		},
+		{
+			"name": "js",
+			"path": "../../../Users/brand/Downloads/haircare-mall/haircare-mall/js"
+		},
+		{
+			"name": "haircare-mall",
+			"path": "."
+		},
+		{
+			"name": "img",
+			"path": "../../../Users/brand/Downloads/haircare-mall/haircare-mall/img"
+		}
+	],
+	"settings": {}
+}
