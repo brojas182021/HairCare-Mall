@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-        include('head.php');
+        include('../shared/head.php');
     ?>
     <style>
         .banner{
@@ -18,7 +18,7 @@
     </style>
     <body>
         <?php
-            include('navbar.php');
+            include('../shared/navbar.php');
         ?>
 
         <!-- Sección de descripción (banner) -->
@@ -44,7 +44,7 @@
         </div>
 
         <?php
-        include('footer.php');
+        include('../shared/footer.php');
         ?>    
     </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>

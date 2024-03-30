@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("../../shared/conexion.php");
 $con=conectar();
 
 $prod_codigo=$_POST['prod_codigo'];
@@ -13,7 +13,7 @@ $sql="INSERT INTO producto VALUES('$prod_codigo','$prod_nombre','$prod_precioVen
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: crud.php");
+    Header("Location: /haircare-mall/project/crud/crud.php");
     
 }else {
 }

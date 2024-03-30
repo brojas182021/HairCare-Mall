@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    include('head.php');
+    include('./shared/head.php');
     
     ?>
     <body>
        
         <!-- Responsive navbar-->
        <?php
-       include('navbar.php');
+       include('./shared/navbar.php');
         ?>
         <!-- Header-->
         <style>
@@ -74,7 +74,7 @@
         </section>
         
         <?php
-        include('footer.php');
+        include('./shared/footer.php');
         ?>
     </body>
 </html>

@@ -1,5 +1,5 @@
 <?php 
-    include("conexion.php");
+    include("../../shared/conexion.php");
     $con=conectar();
 
 $id=$_GET['id'];
@@ -13,8 +13,8 @@ $row=mysqli_fetch_array($query);
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include('head.php');
-include('navbarR.php');
+include('../../shared/head.php');
+include('../../shared/navbarR.php');
 ?>
     <body>
     <style>
@@ -38,7 +38,7 @@ include('navbarR.php');
         <div class="container mt-5 pt-5" style="width:600px">
         <div class="card box" >
             <div class="card-body">
-            <form action="update.php" method="POST">
+            <form action="/haircare-mall/project/crud/update/update.php" method="POST">
                     
                     <input type="hidden" name="prod_codigo" value="<?php echo $row['prod_codigo']  ?>">
                     

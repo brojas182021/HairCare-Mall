@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("../shared/conexion.php");
 $con=conectar();
 session_start();
 if(!empty($_POST["btningresar"])){
@@ -14,7 +14,7 @@ if(!empty($_POST["btningresar"])){
             $query=mysqli_query($con,$sql);
 
             if($query){
-                Header("Location:crud.php");
+                Header("Location: /haircare-mall/project/crud/crud.php");
             }
            
             

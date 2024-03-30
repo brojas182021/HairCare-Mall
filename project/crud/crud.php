@@ -1,5 +1,5 @@
 <?php 
-    include("conexion.php");
+    include("../shared/conexion.php");
     $con=conectar();
 
     $sql="SELECT *  FROM producto";
@@ -8,8 +8,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include('head.php');
-include('navbarR.php');
+include('../shared/head.php');
+include('../shared/navbarR.php');
 ?>
     <body>
         <style>
@@ -126,8 +126,8 @@ include('navbarR.php');
                                                 <th><?php  echo $row['prod_precioVenta']?></th>
                                                 <th><?php  echo $row['prod_Stock']?></th>
                                                 <th><?php  echo $row['prod_descripcion']?></th>    
-                                                <th><a href="actualizar.php?id=<?php echo $row['prod_codigo'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['prod_codigo'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                                <th><a href="/haircare-mall/project/crud/update/actualizar.php?id=<?php echo $row['prod_codigo'] ?>" class="btn btn-info">Editar</a></th>
+                                                <th><a href="/haircare-mall/project/crud/delete/delete.php?id=<?php echo $row['prod_codigo'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                                             </tr>
                                         <?php 
                                             }
@@ -145,7 +145,7 @@ include('navbarR.php');
                 <span class="close-modal">x</span>
                     <div class="card-body">
                     <center> <h4 style="margin-bottom:30px;">Nuevo producto</h4></center>
-                        <form action="insertar.php" method="POST">
+                        <form action="/haircare-mall/project/crud/insert/insertar.php" method="POST">
                             <input type="text" class="form-control mb-3" name="prod_codigo" placeholder="Id">
                             <input type="text" class="form-control mb-3" name="prod_nombre" placeholder="Nombre">
                             <input type="text" class="form-control mb-3" name="prod_precioVenta" placeholder="Precio">
