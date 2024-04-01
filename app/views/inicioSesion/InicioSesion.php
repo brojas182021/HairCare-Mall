@@ -1,12 +1,12 @@
 <html>
     <body>
         <?php
-        include('../shared/head.php');
-        include('../shared/navbar.php');
+        include('./app/views/shared/head.php');
+        include('./app/views/shared/navbar.php');
         ?>
 
         <style>
-            .marmol{background-image:url('./assets/marmol.jpg');}
+            .marmol{background-image:url('../inicioSesion/assets/marmol.jpg');}
             .imagen-centrada {
                 display: block;
                 width: 100%; 
@@ -20,12 +20,12 @@
         <div class="container py-5 h-100">
             <div class="row justify-content-between align-items-center h-90"  style="background-color:#ffffff; border-radius:1rem; box-sizing:border-box;"> <!-- Agrega la clase 'row' y las clases 'justify-content-center align-items-center' para alinear los elementos en fila -->
                 <div class="col-md-8 col-lg-7 col-xl-6 h-100 logo-bg" style="background-color:#d1b885; border-bottom-left-radius: 1rem;">
-                    <img src="./assets/bg_logo.png" class="img-fluid imagen-centrada" alt="Login image">
+                    <img src="../inicioSesion/assets/bg_logo.png" class="img-fluid imagen-centrada" alt="Login image">
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 pt-5">
                 <form method="post" action="./login.php">
                 <?php
-                include('../shared/conexion.php');
+                include('./app/views/shared/conexion.php');
                 $con = conectar();
                 ?>
                 <b><h5 class="mb-3 pb-4 fs-3" style="letter-spacing: 1px;">Ingresa tus datos</h5></b>
