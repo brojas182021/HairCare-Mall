@@ -32,7 +32,7 @@
             <div class="row product-list">
                 <div class="col-lg-4">
                     <div class="card product-card p-2">
-                        <img src="../img/logo_system.png" class="card-img-top" alt="Producto 1" style="max-width:240px; margin: 0 auto;">
+                        <img src="./project/img/logo_system.png" class="card-img-top" alt="Producto 1" style="max-width:240px; margin: 0 auto;">
                         <div class="card-body">
                             <h5 class="card-title">Producto 1</h5>
                             <p class="card-text">Descripción breve del producto 1.</p>

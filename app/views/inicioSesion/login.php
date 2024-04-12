@@ -13,9 +13,9 @@ if(!empty($_POST["btningresar"])){
             $sql="select * from usuario where usua_nombre='$usuario' and usua_clave='$clave'";
             $query=mysqli_query($con,$sql);
 
-            if($query){
-                Header("Location: /haircare-mall/project/crud/crud.php");
-            }
+            // if($query){
+            //     Header("Location: /haircare-mall/project/crud/crud.php");
+            // }
            
             
         }

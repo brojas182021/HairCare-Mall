@@ -1,5 +1,4 @@
 <?php
-
 require_once './app/controllers/mainController.php';
 
 class Router {
@@ -9,6 +8,7 @@ class Router {
         'haircare-mall/inicio-sesion' => 'inicioSesion',
         'haircare-mall/mas-informacion' => 'masInformacion',
         'haircare-mall/contacto' => 'contacto',
+        'haircare-mall/crud' => 'gestionProd'
         // Agrega más rutas según sea necesario
     ];
     
@@ -28,7 +28,7 @@ class Router {
         // Obtener el nombre de la acción correspondiente a la ruta
         $actionName = $url;
         
-        echo $actionName;
+    
         if ($actionName !== null && method_exists($controller, $actionName)) {
             $controller->{$actionName}();
         } else {
