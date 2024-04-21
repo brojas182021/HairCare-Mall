@@ -1,8 +1,10 @@
 <?php
-// Cargar el enrutador
-require_once './app/config/router.php';
 
-// Crear una instancia del enrutador y manejar la solicitud
-$router = new Router();
-$router->routeRequest();
+require_once 'libs/App.php';
+require_once 'libs/Controller.php';
+require_once 'libs/Model.php';
+require_once 'libs/View.php';
+require_once 'config/config.php';
+
+$app = new App();
 ?>

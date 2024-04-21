@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    include('./app/views/shared/head.php');
+    require_once 'views/shared/head.php';
     
     ?>
     <body>
        
         <!-- Responsive navbar-->
        <?php
-       include('./app/views/shared/navbar.php');
+       require_once 'views/shared/navbar.php';
         ?>
         <!-- Header-->
         <style>
@@ -22,7 +22,7 @@
                 border-color: #A28751;
             }
         </style>
-        <header class=" py-5 tijeras"  >
+        <div class=" py-5 tijeras"  >
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
         <!-- Features section-->
         <section class="py-5 border-bottom" id="features">
             <div class="container px-5 my-5">
@@ -74,7 +74,7 @@
         </section>
         
         <?php
-        include('./app/views/shared/footer.php');
+        require_once 'views/shared/footer.php';
         ?>
     </body>
 </html>
