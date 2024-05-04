@@ -10,10 +10,13 @@ require_once 'controllers/Errores.php';
          $url = rtrim($url, '/');
          $url = explode('/', $url);
 
+         // Ingresa sin definir controlador
          if(empty($url[0])){
              $archivoController = 'controllers/main.php';
              require_once $archivoController;
              $controller = new Main();
+             $controller->loadModel('main');
+             $controller->render();
              return false;
          }
          
@@ -21,10 +24,16 @@ require_once 'controllers/Errores.php';
 
          if(file_exists($archivoController)){
              require_once $archivoController;
-             $controller = new $url[0];
 
+             //Inicializar controlador
+             $controller = new $url[0];
+             $controller->loadModel($url[0]);
+
+             //si hay un metodo por cargar
              if(isset($url[1])){
                 $controller->{$url[1]}();
+             }else{
+                $controller->render();
              }
              
          }else{

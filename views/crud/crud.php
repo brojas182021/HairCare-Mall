@@ -1,19 +1,13 @@
-<?php 
-    include("../shared/conexion.php");
-    $con=conectar();
 
-    $sql="SELECT *  FROM producto";
-    $query=mysqli_query($con,$sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-include('../shared/head.php');
-include('../shared/navbarR.php');
-?>
+    <?php
+    require_once 'views/shared/head.php';
+    require_once 'views/shared/navbar.php';
+    ?>
     <body>
         <style>
-        .modal-agregar-container{
+            .modal-agregar-container{
             display:none;
             position: fixed;
             top: 0;
@@ -24,9 +18,9 @@ include('../shared/navbarR.php');
             justify-content: center;
             align-items: center;
             z-index: 999;
-        }
-        
-        .card {    
+            }
+            
+            .card {    
             width: 90%;
             margin: 6rem auto;
             display:flex;
@@ -34,18 +28,18 @@ include('../shared/navbarR.php');
             align-items:center;
             border: none;
             position: relative;
-        }
-
-        .card-body {
+            }
+        
+            .card-body {
             width: 90%;
             padding: 40px 10px 20px;
-        }
-
-        .card-body .form-control{
+            }
+        
+            .card-body .form-control{
             width:100%;
-        }
-
-        .boton-agrega {
+            }
+        
+            .boton-agrega {
             position: fixed;
             bottom: 10%;
             right: 5%;
@@ -61,31 +55,31 @@ include('../shared/navbarR.php');
             font-size: 25px;
             /* line-height: 20px; */
             z-index: 99;
-        }
-
-        .boton-agrega::before {
+            }
+        
+            .boton-agrega::before {
             position: relative;
             top:-6%;
             content:'+';
-        }
-
-        .modal-agregar-container.active{
+            }
+        
+            .modal-agregar-container.active{
             display:block;
-        }
-
-        .close-modal{
+            }
+        
+            .close-modal{
             position: absolute;
             top: 5px;
             right: 4%;
             font-size: 25px;
             cursor:pointer;
-        }
-
-        .container.table{
+            }
+        
+            .container.table{
             overflow:scroll;
-        }
-
-        @media (min-width:768px){
+            }
+        
+            @media (min-width:768px){
             .card {    
                 margin: 6rem auto;
             width: 80%;
@@ -97,8 +91,8 @@ include('../shared/navbarR.php');
             .container.table{
                 overflow: auto;
             }
-        }
-
+            }
+        
         </style>
 
             <div class="container table" style="margin-top:10rem;">
