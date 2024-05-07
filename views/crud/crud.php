@@ -111,18 +111,22 @@
                                 </thead>
 
                                 <tbody>
-                                        <?php
-                                            while($row=mysqli_fetch_array($query)){
-                                        ?>
+                                    <?php 
+                                        include_once 'models/Product.php';
+                                        
+                                        foreach($this->productos as $row){
+                                            $producto = new Product();
+                                            $producto = $row;
+                                    ?>
                                             <tr>
-                                                <th><?php  echo $row['prod_codigo']?></th>
-                                                <th><?php  echo $row['prod_nombre']?></th>
-                                                <th><?php  echo $row['prod_precioVenta']?></th>
-                                                <th><?php  echo $row['prod_Stock']?></th>
-                                                <th><?php  echo $row['prod_descripcion']?></th>    
-                                                <th><a href="/haircare-mall/project/crud/update/actualizar.php?id=<?php echo $row['prod_codigo'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="/haircare-mall/project/crud/delete/delete.php?id=<?php echo $row['prod_codigo'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
-                                            </tr>
+                                                <th><?php echo $producto->prod_codigo?></th>
+                                                <th><?php echo $producto->prod_nombre?></th>
+                                                <th><?php echo $producto->prod_precio?></th>
+                                                <th><?php echo $producto->prod_stock?></th>
+                                                <th><?php echo $producto->prod_descrip?></th>    
+                                                <th><a href="/haircare-mall/project/crud/update/actualizar.php?id=<?php echo $producto->prod_codigo?>" class="btn btn-info">Editar</a></th>
+                                                <th><a href="/haircare-mall/project/crud/delete/delete.php?id=<?php echo $producto->prod_codigo?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            </tr
                                         <?php 
                                             }
                                         ?>
