@@ -14,7 +14,14 @@
         <style>
 
             .tijeras{
+                margin: 4rem auto 0;
                 background-color:#EEEEEE;
+                height:350px;
+                
+            }
+            .tijeras .title{
+                margin: 0 auto;
+                width: 100%;
             }
             .btn-shop:hover,
             .btn-shop:active {
@@ -26,8 +33,8 @@
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
-                        <div class="text-center my-5">
-                            <h1 class="display-5 fw-bolder fs-2 text-black mb-5 pt-5">Productos para tu look único o para impulsar tu negocio</h1>
+                        <div class="text-center">
+                            <h1 class="display-5 fw-bolder fs-2 text-white mb-5 pt-5 title">Productos para tu look único o para impulsar tu negocio</h1>
                             
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                                 <a class="btn btn-shop bg-primary text-white btn-md px-4 me-sm-3" href="#features">Comprar</a>
