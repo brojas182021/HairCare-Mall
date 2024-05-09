@@ -143,7 +143,7 @@
                 <span class="close-modal">x</span>
                     <div class="card-body">
                     <center> <h4 style="margin-bottom:30px;">Nuevo producto</h4></center>
-                        <form action="/haircare-mall/project/crud/insert/insertar.php" method="POST">
+                        <form action="<?php echo constant('URL')?>crud/insertProd" method="POST">
                             <input type="text" class="form-control mb-3" name="prod_codigo" placeholder="Id">
                             <input type="text" class="form-control mb-3" name="prod_nombre" placeholder="Nombre">
                             <input type="text" class="form-control mb-3" name="prod_precioVenta" placeholder="Precio">
