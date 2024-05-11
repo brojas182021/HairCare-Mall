@@ -124,7 +124,7 @@
                                                 <th><?php echo $producto->prod_precio?></th>
                                                 <th><?php echo $producto->prod_stock?></th>
                                                 <th><?php echo $producto->prod_descrip?></th>    
-                                                <th><a href="<?php echo constant('URL')?>crud/updateProd/<?php echo $producto->prod_codigo?>" class="btn btn-info">Editar</a></th>
+                                                <th><a href="<?php echo constant('URL')?>crud/verProducto/<?php echo $producto->prod_codigo?>" class="btn btn-info">Editar</a></th>
                                                 <th><a href="<?php echo constant('URL')?>crud/deleteProd/<?php echo $producto->prod_codigo?>" class="btn btn-danger">Eliminar</a></th>                                        
                                             </tr
                                         <?php 
