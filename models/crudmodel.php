@@ -89,6 +89,54 @@ class Crudmodel extends Model{
         }
     }
 
+    public function getById($id){
+        $item = new Product();
+
+        $queryFDB = $this->db->connectDatabases(constant('FDB'))->prepare("SELECT* FROM producto WHERE prod_codigo = :prod_codigo");
+        try{
+            $queryFDB->execute(['prod_codigo'=> $id]);
+            
+
+            while($row = $queryFDB->fetch()){
+                
+                $item->prod_codigo = $row['prod_codigo'];
+                $item->prod_nombre = $row['prod_nombre'];
+                $item->prod_precio = $row['prod_precioVenta'];
+                $item->prod_stock = $row['prod_Stock'];
+                $item->prod_descrip = $row['prod_descripcion'];
+
+            }
+
+            return $item;
+
+        }catch(PDOException $e){
+            return null;
+        }
+    }
+    public function update($item){
+        $queryFDB = $this->db->connectDatabases(constant('FDB'))->prepare("UPDATE producto SET  prod_nombre= :prod_nombre, prod_precioVenta = :prod_precio, prod_Stock = :prod_stock, prod_descripcion = :prod_descrip WHERE prod_codigo= :prod_cod");
+        $querySDB = $this->db->connectDatabases(constant('SDB'))->prepare("UPDATE producto SET  prod_nombre= :prod_nombre, prod_precioVenta = :prod_precio, prod_Stock = :prod_stock, prod_descripcion = :prod_descrip WHERE prod_codigo= :prod_cod");
+        try{
+            $queryFDB->execute([
+                'prod_cod' => $item['prod_codigo'],
+                'prod_nombre' => $item['prod_nombre'],
+                'prod_precio' => $item['prod_precioVenta'],
+                'prod_stock' => $item['prod_Stock'],
+                'prod_descrip' => $item['prod_descripcion']
+            ]);
+            $querySDB->execute([
+                'prod_cod' => $item['prod_codigo'],
+                'prod_nombre' => $item['prod_nombre'],
+                'prod_precio' => $item['prod_precioVenta'],
+                'prod_stock' => $item['prod_Stock'],
+                'prod_descrip' => $item['prod_descripcion']
+            ]);
+            return 'Producto actualizado';
+        }catch(PDOException $e){
+            return $e->getMessage();
+        }
+    }
+    
     //metodo para insertar datos sin importar el fallo en alguna de las BBDD
     // public function insert($datos) {
     //     try {
