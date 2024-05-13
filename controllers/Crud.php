@@ -93,12 +93,12 @@ class Crud extends Controller{
         if ($resultado) {
             // Mostrar un alert en JavaScript indicando que la inserción fue exitosa
             echo '<script>alert("'.$resultado.'");</script>';
-            //echo "<script>window.location.href = '" . constant('URL') . "crud';</script>";
+            echo "<script>window.location.href = '" . constant('URL') . "crud';</script>";
             $this->render();
         } else {
             // Mostrar un alert en JavaScript con el mensaje de error específico
             echo '<script>alert("'.$resultado.'");</script>';
-            //echo "<script>window.location.href = '" . constant('URL') . "crud';</script>";
+            echo "<script>window.location.href = '" . constant('URL') . "crud';</script>";
             $this->render();
         }
      }

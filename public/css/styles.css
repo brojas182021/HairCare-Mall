@@ -2066,6 +2066,7 @@ progress {
 
 .table>tbody {
   vertical-align: inherit;
+  background-color: white;
 }
 
 .table>thead {
@@ -2150,17 +2151,17 @@ progress {
 
 .table-success {
   --bs-table-color: #000;
-  --bs-table-bg: #d1b885;
-  --bs-table-border-color: #d1b885;
-  --bs-table-striped-bg: #d1b885;
+  --bs-table-bg: #637373;
+  --bs-table-border-color: #637373;
+  --bs-table-striped-bg: #637373;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #d1b885;
+  --bs-table-active-bg: #637373;
   --bs-table-active-color: #000;
   --bs-table-hover-bg: #c1d6cc;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
-  background-color: #d1b885;
+  background-color: #637373;
 }
 
 .table-info {
@@ -3305,19 +3306,19 @@ fieldset:disabled .btn {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #d1b885;
-  --bs-btn-border-color: #d1b885;
+  --bs-btn-bg: #637373;
+  --bs-btn-border-color: #637373;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d1b885;
-  --bs-btn-hover-border-color: #d1b885;
+  --bs-btn-hover-bg: #637373;
+  --bs-btn-hover-border-color: #637373;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #d1b885;
-  --bs-btn-active-border-color: #d1b885;
+  --bs-btn-active-bg: #637373;
+  --bs-btn-active-border-color: #637373;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #d1b885;
-  --bs-btn-disabled-border-color: #d1b885;
+  --bs-btn-disabled-bg: #637373;
+  --bs-btn-disabled-border-color: #637373;
 }
 
 .btn-secondary {
@@ -4846,6 +4847,7 @@ fieldset:disabled .btn {
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
+  font-size: 18px;
 }
 
 .card-subtitle {
@@ -5660,6 +5662,9 @@ fieldset:disabled .btn {
   .list-group-horizontal-md>.list-group-item+.list-group-item.active {
     margin-left: calc(-1 * var(--bs-list-group-border-width));
     border-left-width: var(--bs-list-group-border-width);
+  }
+  .card-title {
+
   }
 }
 
@@ -12650,14 +12655,6 @@ fieldset:disabled .btn {
 
 }
 
-.tijeras {
-  margin: 4rem auto 0;
-  background-image: url('/haircare-mall/public/assets/hair-dryer-6798064_1920.jpg');
-  background-size: cover;
-  background-position: 100% 45%;
-  background-repeat: no-repeat;
-  width: 100%;
-}
 
 footer {
   width: 100%;

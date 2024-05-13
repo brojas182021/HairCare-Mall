@@ -8,11 +8,11 @@
         require_once 'views/shared/navbar.php';
         ?>
 
-        <section class="vh-100 marmol" style="background-color:beige">
+        <section class="vh-100 marmol" style="background-color:#fafafa">
             <div class="container py-5 h-100">
                 <div class="row justify-content-between align-items-center h-90"  style="background-color:#ffffff; border-radius:1rem; box-sizing:border-box;">
-                    <div class="col-md-8 col-lg-7 col-xl-6 h-100 logo-bg" style="background-color:#d1b885; border-bottom-left-radius: 1rem;">
-                        <img src="<?php constant('URL');?>public/assets/bg_logo.png" class="img-fluid imagen-centrada" alt="Login image">
+                    <div class="col-md-8 col-lg-7 col-xl-6 h-100 logo-bg d-flex" style="background-color:#637373; border-bottom-left-radius: 1rem;">
+                        <img src="<?php constant('URL');?>public/assets/bg_logo.png" class="img-fluid imagen-centrada" alt="Login image" style="margin: 0 auto;">
                     </div>
                     <div class="col-md-7 col-lg-5 col-xl-5 pt-5 pb-5">
                         
