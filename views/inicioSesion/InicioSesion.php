@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <body>
+    <body style="background-color:#fafafa">
 
         <?php
         // Incluir archivos PHP para encabezado y barra de navegación
@@ -8,14 +8,51 @@
         require_once 'views/shared/navbar.php';
         ?>
 
-        <section class="vh-100 marmol" style="background-color:#fafafa">
-            <div class="container py-5 h-100">
-                <div class="row justify-content-between align-items-center h-90"  style="background-color:#ffffff; border-radius:1rem; box-sizing:border-box; box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 4px 6px 0 rgb(0 0 0 / 10%);margin: 6rem auto; width:90%; max-width:1000px;">
-                    <div class="col-md-8 col-lg-7 col-xl-6 h-100 logo-bg d-flex" style="background-color:white; border-right:1px solid #637373 ;">
-                        <img src="<?php constant('URL');?>public/assets/iniciar-sesion.png" class="img-fluid imagen-centrada" width="220px" alt="Login image" style="margin: 0 auto;">
+        <style>
+            .form-login{
+                padding:2rem;
+                margin: 5rem auto 4rem; 
+                width:90%; 
+                max-width:800px;
+                display:flex;
+                flex-direction:column; 
+                border-radius:16px; 
+                box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 4px 6px 0 rgb(0 0 0 / 10%);
+                background-color:#fff;
+            }
+            .img-fluid{
+                display:block;
+                margin: 0 auto;
+                padding:20px 40px;
+                width: 90%;
+                max-width:350px;
+            }
+            .form-login form{
+                margin: 0 auto;
+                width: 85%;
+            }
+            @media(min-width:768px){
+                .form-login{
+                    padding:3rem;
+                    display:grid;
+                    grid-template-columns:40% 52%;
+                    justify-content:center;
+                    align-items:center;
+                    gap:8%;
+                }
+                .img-fluid{
+                    padding:0;
+                }
+            }
+        </style>
+
+        <section>
+            <div class="container py-5">
+                <div class="form-login h-90">
+                    <div class="img-content">
+                        <img src="<?php constant('URL');?>public/assets/iniciar-sesion.png" class="img-fluid" alt="Login image">
                     </div>
-                    <div class="col-md-7 col-lg-5 col-xl-5 pt-5 pb-5">
-                        
+                    <div class="">            
                         <form action="<?php constant('URL');?>inicioSesion/consultarUsuario" method="post">
                             <b><h5 class="mb-3 pb-4 fs-3" style="letter-spacing: 1px;">Inicia sesión</h5></b>
                             <div class="form-outline mb-4">
@@ -40,6 +77,7 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
- 
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script> 
     </body>
 </html>

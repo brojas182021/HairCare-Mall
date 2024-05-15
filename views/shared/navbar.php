@@ -6,7 +6,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/haircare-mall">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="/haircare-mall/catalogo">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contactanos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/haircare-mall/contactenos">Contactanos</a></li>
                         <li class="nav-item d-flex justify-content-flex-start align-items-center"> <a href="/haircare-mall/inicioSesion"><i class="fa-solid fa-user nav-link"></i></a></li>
                     </ul>
                 </div>

@@ -36,22 +36,23 @@ class Crud extends Controller{
     }
 
     function deleteProd($param = null) {
-        $idProd = $param[0];
+            $idProd = $param[0];
 
-        $resultado = $this->model->deleteById($idProd);
-        if ($resultado) {
+            $resultado = $this->model->deleteById($idProd);
+            if ($resultado) {
             // Mostrar un alert en JavaScript indicando que la inserción fue exitosa
             echo '<script>alert("'.$resultado.'");</script>';
             echo "<script>window.location.href = '" . constant('URL') . "crud';</script>";
             $this->render();
-        } else {
+            } else {
             // Mostrar un alert en JavaScript con el mensaje de error específico
             echo '<script>alert("'.$resultado.'");</script>';
             echo "<script>window.location.href = '" . constant('URL') . "crud';</script>";
             $this->render();
-        }
+            }
         
      }
+
      function verProducto($param= null){
         $idProducto = $param[0];
         $producto = $this->model->getById($idProducto);
@@ -71,23 +72,11 @@ class Crud extends Controller{
         $prod_precio  = $_POST['prod_precio'];
         $prod_stock   = $_POST['prod_stock'];
         $prod_descrip = $_POST['prod_descrip'];
+        // Eliminar el símbolo de dólar y los separadores de mil
+        $valor_sin_simbolo = str_replace(array('$', '.'), '', $prod_precio);
+        // Convertir a entero
+        $prod_precio = intval($valor_sin_simbolo);
         unset($_SESSION['id_verProducto']);
-       
-    //  if($this->model->update(['prod_codigo' => $prod_codigo, 'prod_nombre' => $prod_nombre, 'prod_precioVenta' => $prod_precio, 'prod_Stock' => $prod_stock, 'prod_descripcion' => $prod_descrip])){
-            
-    //         $producto = new Product();
-    //         $producto -> prod_codigo = $prod_codigo;
-    //         $producto -> prod_nombre = $prod_nombre;
-    //         $producto -> prod_precio = $prod_precio;
-    //         $producto -> prod_stock = $prod_stock;
-    //         $producto -> prod_descrip = $prod_descrip;
-    //         $this->view->producto = $producto;
-    //         $this->view->mensaje = "Producto Actualizado correctamente";
-    //     }else{
-    //         $this->view->mensaje = "Producto no se pudo actualizar";
-    //     }
-    //     $this->render('crud/detalleProd');
-
 
         $resultado =$this->model->update(['prod_codigo' => $prod_codigo, 'prod_nombre' => $prod_nombre, 'prod_precioVenta' => $prod_precio, 'prod_Stock' => $prod_stock, 'prod_descripcion' => $prod_descrip]);
         if ($resultado) {

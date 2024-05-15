@@ -6,16 +6,15 @@
     <style>
         .banner{
             width: 80%;
-            margin-top: 5rem;
-    padding: 2rem 6rem 2rem;
-    width: 100%;
-    height: 320px;
-    
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+            margin: 8rem auto 1rem;
+            padding: 2rem;
+            width: 100%;
+            height: 380px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
         }
 
         .banner p{
@@ -23,62 +22,63 @@
         }
 
         .container-fluid{
-            padding:40px 20px;
             width:100%;
             background-color:white;
         }
         .custom-gap {
-      gap: 20px; /* Puedes ajustar este valor según tus necesidades */
-    }
+            gap: 20px;
+        }
 
-    .container-cards{
-        display:grid;
-        grid-template-columns: repeat(2 , 1fr);
-        justify-content:center;
-        align-items:center;
-    }
-
-    .product-card{
-        margin:0 auto;
-        width: 100%;
-        max-width: 250px;
-        background-color:#fafafa;
-        border:none;
-        box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 4px 6px 0 rgb(0 0 0 / 10%);
-
-    }
-
-    .container-cards{  
-            margin:1rem auto;
+        .container-cards{
+            margin:1rem auto 4rem;
             width: 90%;
+            display:grid;
             grid-template-columns: repeat(1 , 1fr);
+            justify-content:center;
+            align-items:center;
             gap:30px;
         }
 
-    @media(min-width:768px){
-        .container-cards{
-            width: 90%;
-            max-width:900px;  
-            grid-template-columns: repeat(3 , 1fr);
-            gap:36px;
-        }
         .product-card{
-            max-width: 280px;
+            margin:0 auto;
+            width: 100%;
+            max-width: 250px;
+            background-color:#fafafa;
+            border:none;
+            box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 4px 6px 0 rgb(0 0 0 / 10%);
         }
-        .banner p{
-            font-size:18px;
+
+        @media(min-width:768px){
+            .container-cards{
+                max-width:900px;  
+                grid-template-columns: repeat(3 , 1fr);
+                gap:36px;
+            }
+            .product-card{
+                max-width: 280px;
+            }
+            .banner{
+                margin: 5rem auto 1rem;
+                flex-direction:row;
+            }
+            .banner p{
+                font-size:18px;
+            }
         }
-    }
     </style>
+
     <body>
         <?php
             require_once 'views/shared/navbar.php';
         ?>
 
         <!-- Sección de descripción (banner) -->
-        <div class="banner text-center">
-            <h1>Catalogo de productos</h1>
-            <p>Explora la variedad de productos registrados con una visualización sencilla.<img src="<?php echo constant('URL')?>/public/assets/catalogo-animado.gif"   alt="" align="right" style="width:200px;"></p>
+        <div class="banner text-left">
+            <div class="content-text">
+                <h1>Catalogo de productos</h1>
+                <p>Explora la variedad de productos registrados con una visualización sencilla.</p>
+            </div>
+            <img src="<?php echo constant('URL')?>/public/assets/catalogo-animado.gif"   alt="" align="right" style="width:280px;">
         </div>
 
         <!-- Sección de productos -->
@@ -92,7 +92,7 @@
                             $producto = new Product();
                             $producto = $row;
                     ?>
-                    <div class="card product-card p-2">
+                    <div class="card product-card p-3">
                         <img src="<?php echo constant('URL')?>public/assets/productos.jpg" class="card-img-top" alt="Producto 1" style="max-width:240px; margin: 0 auto;">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $producto->prod_nombre?></h5>
