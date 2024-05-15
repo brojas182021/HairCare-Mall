@@ -10,12 +10,12 @@
     padding: 2rem 6rem 2rem;
     width: 100%;
     height: 320px;
-    background-color: #679B9B;
-    color: white;
+    
+    color: black;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    
         }
 
         .banner p{
@@ -44,6 +44,8 @@
         max-width: 250px;
         background-color:#fafafa;
         border:none;
+        box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 4px 6px 0 rgb(0 0 0 / 10%);
+
     }
 
     .container-cards{  
@@ -76,7 +78,7 @@
         <!-- Sección de descripción (banner) -->
         <div class="banner text-center">
             <h1>Catalogo de productos</h1>
-            <p>Explora la variedad de productos registrados con una visualización sencilla.</p>
+            <p>Explora la variedad de productos registrados con una visualización sencilla.<img src="<?php echo constant('URL')?>/public/assets/catalogo-animado.gif"   alt="" align="right" style="width:200px;"></p>
         </div>
 
         <!-- Sección de productos -->
@@ -91,7 +93,7 @@
                             $producto = $row;
                     ?>
                     <div class="card product-card p-2">
-                        <img src="<?php echo constant('URL')?>public/assets/logo_system.png" class="card-img-top" alt="Producto 1" style="max-width:240px; margin: 0 auto;">
+                        <img src="<?php echo constant('URL')?>public/assets/productos.jpg" class="card-img-top" alt="Producto 1" style="max-width:240px; margin: 0 auto;">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $producto->prod_nombre?></h5>
                             <div class="d-flex justify-content-between align-items-center">
