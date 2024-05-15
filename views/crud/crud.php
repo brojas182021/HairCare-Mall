@@ -73,21 +73,22 @@
             cursor:pointer;
             }
             .container.table{
-            overflow:scroll;
+                width: 95%;
+                overflow:scroll;
             }
 
             @media (min-width:768px){
-            .card {    
+                .card {    
                 margin: 6rem auto;
-            width: 80%;
-            max-width:440px;
-            }
-            .card-body .form-control{
-            width:100%;
-            }  
-            .container.table{
+                width: 80%;
+                max-width:440px;
+                }
+                .card-body .form-control{
+                width:100%;
+                }  
+                .container.table{
                 overflow: auto;
-            }
+                }
             }
         </style>
 
@@ -130,8 +131,6 @@
                 </div>  
             </div>
             
-
-
             <!--Modal agregar registro-->
             <div class="modal-agregar-container" id="modalInsertar">
                 <div class="card box" style="">
@@ -155,19 +154,5 @@
             </button>
     </body>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        let botonAgrega = document.querySelector('.boton-agrega');
-        let modalInsertar = document.querySelector('#modalInsertar');
-        let closeModal = document.querySelector('.close-modal');
-
-        botonAgrega.addEventListener('click', function() {
-            modalInsertar.classList.add('active');
-        });
-
-        closeModal.addEventListener('click', function() {
-            modalInsertar.classList.remove('active');
-        });
-    });
-    </script>
+    <script src="<?php echo constant('URL')?>views/crud/js/crud.js"></script>
 </html>

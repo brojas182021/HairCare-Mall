@@ -6,10 +6,10 @@
     <style>
         .banner{
             width: 80%;
-            margin: 8rem auto 1rem;
+            margin: 8rem auto 0rem;
             padding: 2rem;
             width: 100%;
-            height: 380px;
+            height: 340px;
             color: black;
             display: flex;
             justify-content: center;
@@ -19,6 +19,10 @@
 
         .banner p{
             margin-top:0.5rem;
+        }
+
+        .banner img{
+            width: 180px;
         }
 
         .container-fluid{
@@ -41,6 +45,7 @@
 
         .product-card{
             margin:0 auto;
+            padding: 1rem;
             width: 100%;
             max-width: 250px;
             background-color:#fafafa;
@@ -58,11 +63,16 @@
                 max-width: 280px;
             }
             .banner{
-                margin: 5rem auto 1rem;
+                margin: 5rem auto 0rem;
                 flex-direction:row;
+                gap:6rem;
             }
             .banner p{
                 font-size:18px;
+            }
+
+            .banner img{
+                width:280px;
             }
         }
     </style>
@@ -78,7 +88,7 @@
                 <h1>Catalogo de productos</h1>
                 <p>Explora la variedad de productos registrados con una visualización sencilla.</p>
             </div>
-            <img src="<?php echo constant('URL')?>/public/assets/catalogo-animado.gif"   alt="" align="right" style="width:280px;">
+            <img src="<?php echo constant('URL')?>/public/assets/catalogo-animado.gif"   alt="" align="right">
         </div>
 
         <!-- Sección de productos -->
@@ -92,7 +102,7 @@
                             $producto = new Product();
                             $producto = $row;
                     ?>
-                    <div class="card product-card p-3">
+                    <div class="card product-card">
                         <img src="<?php echo constant('URL')?>public/assets/productos.jpg" class="card-img-top" alt="Producto 1" style="max-width:240px; margin: 0 auto;">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $producto->prod_nombre?></h5>

@@ -7,18 +7,15 @@
 
    <style>
       body{
-        min-height: 100vh;
+        height: 100vh;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
         .containerContact{
-          margin:6.5rem auto 2rem;
+          margin:6.5rem auto;
           width: 65%;
           background: #fff;
           border-radius: 6px;
-          padding: 20px 60px 30px 40px;
+          padding: 0px 60px 10px 40px;
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
         .containerContact .content{
@@ -115,22 +112,25 @@
       background: #637373;
     }
 
+    footer{
+      position:fixed;
+    }
     @media (max-width: 950px) {
       .containerContact{
+        margin: 8rem auto 4rem;
         width: 90%;
         padding: 30px 40px 40px 35px ;
       }
       .containerContact .content .right-side{
-       width: 75%;
-       margin-left: 55px;
-        }
+        width: 75%;
+        margin-left: 55px;
+      }
+      footer{
+      position:relative;
+    }
     }
 
     @media (max-width: 820px) {
-      .containerContact{
-        margin: 6rem auto 1rem;
-        height: 100%;
-      }
        .containerContact .content{
          flex-direction: column-reverse;
        }
@@ -195,6 +195,9 @@
       </div>
     </div>
 
+    <?php
+        require_once 'views/shared/footer.php';
+        ?>
     <script src="<?php echo constant('URL')?>views/contactenos/js/contactenos.js"> </script>
 </body>
 
