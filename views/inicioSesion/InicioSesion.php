@@ -10,9 +10,9 @@
 
         <section class="vh-100 marmol" style="background-color:#fafafa">
             <div class="container py-5 h-100">
-                <div class="row justify-content-between align-items-center h-90"  style="background-color:#ffffff; border-radius:1rem; box-sizing:border-box;">
-                    <div class="col-md-8 col-lg-7 col-xl-6 h-100 logo-bg d-flex" style="background-color:#637373; border-bottom-left-radius: 1rem;">
-                        <img src="<?php constant('URL');?>public/assets/bg_logo.png" class="img-fluid imagen-centrada" alt="Login image" style="margin: 0 auto;">
+                <div class="row justify-content-between align-items-center h-90"  style="background-color:#ffffff; border-radius:1rem; box-sizing:border-box; box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 4px 6px 0 rgb(0 0 0 / 10%);margin: 6rem auto; width:90%; max-width:1000px;">
+                    <div class="col-md-8 col-lg-7 col-xl-6 h-100 logo-bg d-flex" style="background-color:white; border-right:1px solid #637373 ;">
+                        <img src="<?php constant('URL');?>public/assets/iniciar-sesion.png" class="img-fluid imagen-centrada" width="220px" alt="Login image" style="margin: 0 auto;">
                     </div>
                     <div class="col-md-7 col-lg-5 col-xl-5 pt-5 pb-5">
                         
@@ -40,6 +40,6 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        
+ 
     </body>
 </html>
